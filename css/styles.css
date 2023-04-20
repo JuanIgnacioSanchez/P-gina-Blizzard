@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+header .navbar {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+header .navbar .navbar-toggler {
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+  --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+  --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-padding-y: 0.3125rem;
+  --bs-navbar-brand-margin-end: 1rem;
+  --bs-navbar-brand-font-size: 1.25rem;
+  --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-nav-link-padding-x: 0.5rem;
+  --bs-navbar-toggler-padding-y: 0.25rem;
+  --bs-navbar-toggler-padding-x: 0.75rem;
+  --bs-navbar-toggler-font-size: 1.25rem;
+  --bs-navbar-toggler-icon-bg: url(
+    data:image/svg + xml,
+    %3csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 30 30"%3e%3cpathstroke="rgba%2833, 37, 41, 0.75%29"stroke-linecap="round"stroke-miterlimit="10"stroke-width="2"d="M4 7h22M4 15h22M4 23h22"/%3e%3c/svg%3e
+  );
+  --bs-navbar-toggler-focus-width: 0;
+  --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+}
+header .navbar .carro-button {
+  background-color: black;
+  border: 0;
+  width: 26px;
+  height: 26px;
+}
+header .navbar .carro-button .carro {
+  background-color: white;
+}
+header .navbar .navbar-toggler {
+  border: 0;
+}
+header .navbar .nav-link {
+  color: white;
+  padding: 3%;
+}
+header .navbar .navbar-brand {
+  width: 30%;
+  height: auto;
+}
+header .navbar .navbar-brand .logo-img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: black;
+}
+footer .container-icons {
+  width: 100%;
+  text-align: center;
+  padding: 8% 0 3% 0;
+}
+footer .container-icons .icon-footer {
+  margin: 0 3%;
+  font-size: 32px;
+}
+footer .container-text-footer {
+  padding: 5% 2%;
+}
+footer .container-text-footer .text-footer {
+  color: white;
+  font-size: 120%;
+  text-align: center;
+}
+
+.title-index {
+  background-color: blue;
+  text-align: center;
+  padding: 10% 0;
+  font-size: 210%;
+  color: #e5e5e5;
+}
+
+.gallery-index {
+  width: 100%;
+  padding: 15% 0;
+  height: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-content: center;
+  gap: 2%;
+}
+.gallery-index .card-product-index {
+  width: 85%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.2);
+  cursor: default;
+  transition: all 400ms ease;
+}
+.gallery-index .card-product-index:hover {
+  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3%);
+}
+.gallery-index .card-product-index .img-product-index {
+  width: 100%;
+  height: 80%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.gallery-index .card-product-index .titlte-product-index {
+  font-size: 180%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 4% 0;
+}
+.gallery-index .card-product-index .input-product-index {
+  width: 25%;
+  border: 0;
+  border-radius: 15px;
+  background-color: black;
+  color: #e5e5e5;
+  margin: 0 0 3% 0;
+  padding: 2%;
+  text-align: center;
+  transition: all 400ms ease;
+}
+.gallery-index .card-product-index .input-product-index:hover {
+  transition: all 400ms ease;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  font-weight: 600;
+}
+
+.third-section-index {
+  margin: 4% 0;
+  padding: 10% 15%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 400ms ease;
+}
+.third-section-index:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 400ms ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+.third-section-index .p-eslogan {
+  color: #e5e5e5;
+  font-weight: 700;
+  font-size: 140%;
+  text-align: center;
+  transition: all 400ms ease;
+}
+.third-section-index .p-eslogan:hover {
+  transition: all 400ms ease;
+  color: black;
+  font-size: 170%;
+}
+
+.fourth-section-index {
+  padding: 30%;
+  background-color: grey;
+}
+
+/*# sourceMappingURL=styles.css.map */
