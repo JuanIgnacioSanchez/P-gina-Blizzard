@@ -17,12 +17,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 header .navbar {
   padding: 0;
   margin: 0;
-  background-color: black;
+  width: 100%;
 }
 header .navbar .navbar-toggler {
   --bs-navbar-padding-x: 0;
@@ -48,10 +50,14 @@ header .navbar .navbar-toggler {
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
 }
 header .navbar .carro-button {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   border: 0;
   width: 26px;
   height: 26px;
+  transition: all 400ms ease;
+}
+header .navbar .carro-button:hover {
+  transform: translateY(-7%);
 }
 header .navbar .carro-button .carro {
   background-color: white;
@@ -62,9 +68,14 @@ header .navbar .navbar-toggler {
 header .navbar .nav-link {
   color: white;
   padding: 3%;
+  transition: all 400ms ease;
+}
+header .navbar .nav-link:hover {
+  transform: translateY(-7%);
+  color: rgba(255, 255, 255, 0.5);
 }
 header .navbar .navbar-brand {
-  width: 30%;
+  width: 25%;
   height: auto;
 }
 header .navbar .navbar-brand .logo-img {
@@ -74,6 +85,8 @@ header .navbar .navbar-brand .logo-img {
 
 footer {
   background-color: black;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.3);
+  margin-top: 5%;
 }
 footer .container-icons {
   width: 100%;
@@ -83,6 +96,10 @@ footer .container-icons {
 footer .container-icons .icon-footer {
   margin: 0 3%;
   font-size: 32px;
+  transition: all 400ms ease;
+}
+footer .container-icons .icon-footer:hover {
+  transform: translateY(-7%);
 }
 footer .container-text-footer {
   padding: 5% 2%;
@@ -92,13 +109,139 @@ footer .container-text-footer .text-footer {
   font-size: 120%;
   text-align: center;
 }
+footer .container-text-footer .text-copyright {
+  font-size: 90%;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 2%;
+}
 
 .title-index {
-  background-color: blue;
+  background-color: black;
   text-align: center;
-  padding: 10% 0;
+  padding: 3% 0;
+  margin: 7%;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
   font-size: 210%;
-  color: #e5e5e5;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: all 400ms ease;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+}
+.title-index:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5%);
+}
+
+.third-section-index {
+  margin: 4% 0;
+  padding: 10% 15%;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 300ms ease;
+}
+.third-section-index:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  color: black;
+}
+.third-section-index .p-eslogan {
+  font-weight: 700;
+  font-size: 140%;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.fourth-section-index {
+  padding: 30%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container-nos {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+.container-nos .title-nos {
+  margin: 7%;
+  padding: 3% 0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  color: white;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.container-nos .title-nos:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5%);
+}
+.container-nos .section-nos {
+  margin: 3% 7% 5%;
+  text-align: center;
+  padding: 0 4%;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: all 200ms ease;
+}
+.container-nos .section-nos:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transform: scale(105%);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.container-nos .section-nos .title-section-nos {
+  color: white;
+  padding: 4% 0;
+}
+.container-nos .section-nos .p-section-nos {
+  color: white;
+  padding-bottom: 4%;
+}
+.container-nos .section-grid-nos {
+  margin: 2%;
+  padding: 2%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+.container-nos .section-grid-nos .bloque-nos {
+  text-align: center;
+  padding: 4%;
+  margin: 10% 2%;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms ease;
+}
+.container-nos .section-grid-nos .bloque-nos:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  transform: scale(102%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.container-nos .section-grid-nos .bloque-nos .title-bloque-nos {
+  font-size: 160%;
+  margin-bottom: 3%;
+}
+.container-nos .section-grid-nos hr {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 0;
+  border-top: 2px solid rgba(255, 255, 255, 0);
+}
+
+.title-product {
+  margin: 7% 7% 3% 7%;
+  padding: 3% 0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  color: white;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.title-product:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5%);
 }
 
 .gallery-index {
@@ -119,12 +262,12 @@ footer .container-text-footer .text-footer {
   flex-direction: column;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.3);
   cursor: default;
   transition: all 400ms ease;
 }
 .gallery-index .card-product-index:hover {
-  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
   transform: translateY(-3%);
 }
 .gallery-index .card-product-index .img-product-index {
@@ -142,50 +285,79 @@ footer .container-text-footer .text-footer {
   padding: 4% 0;
 }
 .gallery-index .card-product-index .input-product-index {
-  width: 25%;
+  width: 45%;
   border: 0;
   border-radius: 15px;
   background-color: black;
-  color: #e5e5e5;
+  color: white;
   margin: 0 0 3% 0;
   padding: 2%;
   text-align: center;
   transition: all 400ms ease;
 }
 .gallery-index .card-product-index .input-product-index:hover {
-  transition: all 400ms ease;
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
   font-weight: 600;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
 }
 
-.third-section-index {
-  margin: 4% 0;
-  padding: 10% 15%;
-  background-color: rgba(255, 255, 255, 0.2);
-  transition: all 400ms ease;
-}
-.third-section-index:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: all 400ms ease;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-}
-.third-section-index .p-eslogan {
-  color: #e5e5e5;
-  font-weight: 700;
-  font-size: 140%;
+.title-contact {
+  margin: 7% 7% 3% 7%;
+  padding: 3% 0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  color: white;
   text-align: center;
-  transition: all 400ms ease;
+  transition: all 300ms ease;
 }
-.third-section-index .p-eslogan:hover {
-  transition: all 400ms ease;
-  color: black;
-  font-size: 170%;
+.title-contact:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5%);
 }
 
-.fourth-section-index {
-  padding: 30%;
-  background-color: grey;
+.section-con {
+  margin: 8%;
+  padding: 10% 0;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+.section-con form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-con form .form-input {
+  margin: 2%;
+  padding: 1%;
+  border-radius: 8px;
+  border: 0;
+  height: 90%;
+  transition: all 300ms ease;
+}
+.section-con form .form-input:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+.section-con form .message {
+  margin: 5% 0;
+  resize: none;
+}
+.section-con form .submit-button {
+  padding: 1% 2%;
+  width: 20%;
+  border-radius: 10px;
+  border: 0;
+  transition: all 400ms ease;
+}
+.section-con form .submit-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
 /*# sourceMappingURL=styles.css.map */

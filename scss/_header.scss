@@ -5,12 +5,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
+  box-shadow: 0 0 5px map-get($color, shadow-secondary-3);
+  background-color: map-get($color, shadow-primary-9);
 
   .navbar {
     padding: 0;
     margin: 0;
-    background-color: $primary-color;
+    width: 100%;
+    background-color: map-get($color, shadow-primary-3);
 
     .navbar-toggler {
       --bs-navbar-padding-x: 0;
@@ -37,13 +40,19 @@ header {
     }
 
     .carro-button {
-      background-color: $primary-color;
+      background-color: map-get($color, shadow-primary-0);
       border: 0;
       width: 26px;
       height: 26px;
+      @include transition-1 (400ms);
+        
+        &:hover {
+          transform: translateY(-7%);
+        }
 
       .carro {
-        background-color: $color-text;
+        background-color: map-get($color, secondary-color);
+        
       }
     }
 
@@ -52,12 +61,18 @@ header {
     }
 
     .nav-link {
-      color: $color-text;
+      color: map-get($color, secondary-color);
       padding: 3%;
+      @include transition-1 (400ms);
+
+      &:hover {
+       transform: translateY(-7%);
+       color: map-get($color, shadow-secondary-5);
+      }
     }
 
     .navbar-brand {
-      width: 30%;
+      width: 25%;
       height: auto;
 
       .logo-img {

@@ -1,0 +1,65 @@
+.title-contact{
+    margin: 7% 7% 3% 7%;
+    padding: 3% 0;
+    border-radius: 15px;
+    box-shadow: 0 0 10px map-get($color, shadow-secondary-3);
+    color: map-get($color, secondary-color);
+    text-align: center;
+    @include transition-1 (300ms);
+
+    &:hover{
+        box-shadow: 0 0 12px map-get($color, shadow-secondary-5);
+        transform: translateY(-5%);
+    }
+}
+
+.section-con {
+    margin: 8%;
+    padding: 10% 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 0 15px map-get($color, shadow-secondary-3);
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .form-input {
+            margin: 2%;
+            padding: 1%;
+            border-radius: 8px;
+            border: 0;
+            height: 90%;
+            @include transition-1 (300ms);
+
+            &:hover {
+                background-color: map-get($color, shadow-secondary-3);
+                box-shadow: 0 0 15px map-get($color, shadow-secondary-8);
+                
+            }
+        }
+
+        .message {
+            margin: 5% 0;
+            resize: none;
+        }
+
+        .submit-button {
+            padding: 1% 2%;
+            width: 20%;
+            border-radius: 10px;
+            border: 0;
+            @include transition-1 (400ms);
+
+            &:hover {
+                background-color: map-get($color, shadow-primary-9);
+                color: map-get($color, shadow-secondary-8);
+                box-shadow: 0 0 15px map-get($color, shadow-secondary-8);
+            }
+        }
+    }
+
+}
