@@ -35,3 +35,24 @@ footer {
     }
   }
 }
+
+@media (min-width: 768px) {
+  footer {
+    .container-icons {
+      .icon-footer {
+        font-size: 50px;
+      }
+    }
+
+    .container-text-footer {
+      .text-footer {
+        font-size: 190%;
+        font-weight: 400;
+      }
+
+      .text-copyright {
+        font-size: 130%;
+      }
+    }
+  }
+}

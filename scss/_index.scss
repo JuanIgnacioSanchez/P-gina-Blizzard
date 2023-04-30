@@ -44,3 +44,31 @@
   padding: 30%;
   background-color: map-get($color, shadow-secondary-5);
 }
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+
+  .container-title-index {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title-index {
+      width: 70%;
+      font-size: 250%;
+    }
+  }
+
+  .third-section-index {
+    
+    &:hover {
+      transform: scale(105%);
+    }
+
+    .p-eslogan {
+      font-size: 220%;
+    }
+  }
+}

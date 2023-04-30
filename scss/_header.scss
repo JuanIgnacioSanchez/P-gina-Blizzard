@@ -9,76 +9,132 @@ header {
   box-shadow: 0 0 5px map-get($color, shadow-secondary-3);
   background-color: map-get($color, shadow-primary-9);
 
+  .bg-body-tertiary {
+    --bs-bg-opacity: 0;
+    background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important;
+  }
+
   .navbar {
     padding: 0;
     margin: 0;
     width: 100%;
-    background-color: map-get($color, shadow-primary-3);
+    background-color: map-get($color, shadow-primary-9);
 
-    .navbar-toggler {
-      --bs-navbar-padding-x: 0;
-      --bs-navbar-padding-y: 0.5rem;
-      --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
-      --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
-      --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
-      --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
-      --bs-navbar-brand-padding-y: 0.3125rem;
-      --bs-navbar-brand-margin-end: 1rem;
-      --bs-navbar-brand-font-size: 1.25rem;
-      --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
-      --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
-      --bs-navbar-nav-link-padding-x: 0.5rem;
-      --bs-navbar-toggler-padding-y: 0.25rem;
-      --bs-navbar-toggler-padding-x: 0.75rem;
-      --bs-navbar-toggler-font-size: 1.25rem;
-      --bs-navbar-toggler-icon-bg: url(
-        data:image/svg + xml,
-        %3csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 30 30"%3e%3cpathstroke="rgba%2833, 37, 41, 0.75%29"stroke-linecap="round"stroke-miterlimit="10"stroke-width="2"d="M4 7h22M4 15h22M4 23h22"/%3e%3c/svg%3e
-      );
-      --bs-navbar-toggler-focus-width: 0;
-      --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
-    }
+      .navbar-toggler {
+        --bs-navbar-padding-x: 0;
+        --bs-navbar-padding-y: 0.5rem;
+        --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+        --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+        --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+        --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+        --bs-navbar-brand-padding-y: 0.3125rem;
+        --bs-navbar-brand-margin-end: 1rem;
+        --bs-navbar-brand-font-size: 1.25rem;
+        --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+        --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+        --bs-navbar-nav-link-padding-x: 0.5rem;
+        --bs-navbar-toggler-padding-y: 0.25rem;
+        --bs-navbar-toggler-padding-x: 0.75rem;
+        --bs-navbar-toggler-font-size: 1.25rem;
+        --bs-navbar-toggler-focus-width: 0;
+        --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+        line-height: 0;
+        padding: 0 1%;
+        font-size: 15px;
+      }
 
-    .carro-button {
-      background-color: map-get($color, shadow-primary-0);
-      border: 0;
-      width: 26px;
-      height: 26px;
-      @include transition-1 (400ms);
-        
+      .div-buttons {
+        width: 25%;
+        display: flex;
+        justify-content: space-evenly;
+
+        .carro-button {
+          background-color: map-get($color, shadow-primary-0);
+          border: 0;
+          width: 26px;
+          height: 26px;
+          @include transition-1 (400ms);
+            
+            &:hover {
+              transform: translateY(-7%);
+            }
+    
+          .carro {
+            background-color: map-get($color, secondary-color);
+            
+          }
+        }
+    
+        .navbar-toggler {
+          border: 0;
+        }
+      }
+  
+      .nav-link {
+        color: map-get($color, secondary-color);
+        padding: 3%;
+        @include transition-1 (400ms);
+        font-weight: 600;
+  
         &:hover {
-          transform: translateY(-7%);
+         transform: translateY(-7%);
+         color: map-get($color, shadow-secondary-5);
+        }
+      }
+  
+      .navbar-brand {
+        width: 25%;
+        height: auto;
+  
+        .logo-img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  header {
+    .navbar {
+      .navbar-brand {
+        width: 20%;
+      }
+
+      .div-buttons {
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+
+        .carro-button {
+          width: 40px;
+          height: 40px;
+
+          img {
+            width: 100%;
+          }
         }
 
-      .carro {
-        background-color: map-get($color, secondary-color);
-        
+        .navbar-toggler {
+          width: 40px;
+          height: 40px;
+
+          img {
+            width: 35px;
+            height: 35px;
+          }
+        }
       }
-    }
 
-    .navbar-toggler {
-      border: 0;
-    }
-
-    .nav-link {
-      color: map-get($color, secondary-color);
-      padding: 3%;
-      @include transition-1 (400ms);
-
-      &:hover {
-       transform: translateY(-7%);
-       color: map-get($color, shadow-secondary-5);
-      }
-    }
-
-    .navbar-brand {
-      width: 25%;
-      height: auto;
-
-      .logo-img {
-        width: 100%;
-        height: auto;
+      .nav-link {
+        font-size: 160%;
       }
     }
   }
 }
+
+@media (min-width: 768px) {
+}
+
