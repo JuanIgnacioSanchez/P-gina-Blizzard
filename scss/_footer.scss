@@ -11,7 +11,7 @@ footer {
     .icon-footer {
       margin: 0 3%;
       font-size: 32px;
-      @include transition-1 (400ms);
+      @include transition-1(400ms);
 
       &:hover {
         transform: translateY(-7%);
@@ -31,7 +31,7 @@ footer {
     .text-copyright {
       font-size: 90%;
       color: map-get($color, shadow-secondary-8);
-      padding-top: 2%;    
+      padding-top: 2%;
     }
   }
 }
@@ -52,6 +52,53 @@ footer {
 
       .text-copyright {
         font-size: 130%;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    .container-icons {
+      .icon-footer {
+        font-size: 40px;
+      }
+    }
+
+    .container-text-footer {
+      padding: 3% 2% 5%;
+
+      .text-footer {
+        font-size: 160%;
+        font-weight: 400;
+      }
+
+      .text-copyright {
+        font-size: 110%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  footer {
+    .container-icons {
+      padding: 4% 0 1%;
+      .icon-footer {
+        font-size: 40px;
+      }
+    }
+
+    .container-text-footer {
+      padding: 3% 2% 5%;
+
+      .text-footer {
+        font-size: 160%;
+        font-weight: 400;
+      }
+
+      .text-copyright {
+        font-size: 110%;
       }
     }
   }

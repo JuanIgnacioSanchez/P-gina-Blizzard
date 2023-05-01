@@ -8,8 +8,8 @@
   font-size: 210%;
   color: map-get($color, secondary-color);
   box-shadow: 0 0 10px map-get($color, shadow-secondary-3);
-  @include transition-1 (400ms);
-  font-family: 'Josefin Sans', sans-serif;
+  @include transition-1(400ms);
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
 
   &:hover {
@@ -18,13 +18,13 @@
   }
 }
 
-.third-section-index {
+.first-section-index {
   margin: 4% 0;
   padding: 10% 15%;
   background-color: map-get($color, shadow-secondary-3);
   box-shadow: 0 0 15px map-get($color, shadow-secondary-3);
   color: map-get($color, secondary-color);
-  @include transition-1 (300ms);
+  @include transition-1(300ms);
 
   &:hover {
     background-color: map-get($color, shadow-secondary-8);
@@ -36,19 +36,41 @@
     font-weight: 700;
     font-size: 140%;
     text-align: center;
-    @include transition-1 (300ms);
+    margin: 0;
+    @include transition-1(200ms);
   }
 }
 
 .fourth-section-index {
-  padding: 30%;
-  background-color: map-get($color, shadow-secondary-5);
+  margin: 4% 0;
+  padding: 10% 15%;
+  background-color: map-get($color, shadow-secondary-3);
+  box-shadow: 0 0 15px map-get($color, shadow-secondary-3);
+  color: map-get($color, secondary-color);
+  @include transition-1(300ms);
+
+  &:hover {
+    background-color: map-get($color, shadow-secondary-8);
+    box-shadow: 0 0 20px map-get($color, shadow-secondary-8);
+    color: map-get($color, primary-color);
+  }
+
+  .p-eslogan {
+    font-weight: 700;
+    font-size: 140%;
+    text-align: center;
+    margin: 0;
+    @include transition-1(300ms);
+  }
+}
+
+.fifth-section-index {
+  background-color: map-get($color, primary-color);
 }
 
 /* Media Queries */
 
 @media (min-width: 768px) {
-
   .container-title-index {
     width: 100%;
     display: flex;
@@ -57,18 +79,100 @@
 
     .title-index {
       width: 70%;
-      font-size: 250%;
+      font-size: 280%;
     }
   }
 
-  .third-section-index {
-    
+  .first-section-index {
+    padding: 5% 15%;
+
     &:hover {
       transform: scale(105%);
     }
 
     .p-eslogan {
-      font-size: 220%;
+      font-size: 200%;
     }
+  }
+
+  .container-carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10% 0;
+    box-shadow: 0 0 15px map-get($color, shadow-secondary-3);
+  }
+
+  .fourth-section-index {
+    padding: 5% 15%;
+
+    &:hover {
+      transform: scale(105%);
+    }
+
+    .p-eslogan {
+      font-size: 200%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container-title-index {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title-index {
+      width: 50%;
+      font-size: 200%;
+      padding: 2% 0;
+      margin: 6% 0;
+    }
+  }
+
+  .first-section-index {
+    padding: 5% 10%;
+    font-size: 70%;
+    margin: 0;
+  }
+
+  .fourth-section-index {
+    padding: 5% 10%;
+    font-size: 70%;
+    margin: 10% 0 0 0;
+  }
+
+  .fifth-section-index {
+    padding: 3% 20% 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-title-index {
+    .title-index {
+      font-size: 220%;
+      padding: 1% 0;
+      margin: 4% 7% 6% 7%;
+    }
+  }
+
+  .first-section-index {
+    padding: 3%;
+    font-size: 70%;
+    margin: 0;
+  }
+
+  .container-carousel {
+    margin: 6% 10%;
+  }
+
+  .fourth-section-index {
+    padding: 3%;
+    font-size: 70%;
+    margin: 0;
+  }
+
+  .fifth-section-index {
+    padding: 3% 30% 0;
   }
 }
