@@ -168,8 +168,16 @@ footer .container-text-footer .text-footer {
 }
 footer .container-text-footer .text-copyright {
   font-size: 90%;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.5);
   padding-top: 2%;
+}
+footer .container-text-footer .text-copyright .luxury-programming {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  transition: all 300ms ease;
+}
+footer .container-text-footer .text-copyright .luxury-programming:hover {
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -607,7 +615,7 @@ footer .container-text-footer .text-copyright {
     padding: 10% 0 0 0;
   }
   .gallery-products .card-product {
-    width: 70%;
+    width: 60%;
   }
   .gallery-products .card-product .titlte-product {
     font-size: 220%;
@@ -676,26 +684,32 @@ footer .container-text-footer .text-copyright {
   transform: translateY(-5%);
 }
 
-.section-con {
-  margin: 8%;
-  padding: 6% 0 10% 0;
+.container-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-con .section-con {
+  padding: 6% 0;
+  margin: 8% 4%;
+  width: 80%;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border-top-right-radius: 25px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
-.section-con form {
+.container-con .section-con form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.section-con form .title-form {
+.container-con .section-con form .title-form {
   color: rgba(255, 255, 255, 0.8);
   font-size: 140%;
   margin-bottom: 10%;
 }
-.section-con form .form-input {
+.container-con .section-con form .form-input {
   width: 70%;
   margin: 2%;
   padding: 1%;
@@ -704,22 +718,23 @@ footer .container-text-footer .text-copyright {
   height: 90%;
   transition: all 300ms ease;
 }
-.section-con form .form-input:hover {
+.container-con .section-con form .form-input:hover {
   background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
-.section-con form .message {
-  margin: 5% 0;
+.container-con .section-con form .message {
+  margin: 2% 0;
   resize: none;
 }
-.section-con form .submit-button {
+.container-con .section-con form .submit-button {
   padding: 1% 2%;
+  margin: 2%;
   width: 20%;
   border-radius: 10px;
   border: 0;
   transition: all 300ms ease;
 }
-.section-con form .submit-button:hover {
+.container-con .section-con form .submit-button:hover {
   background-color: rgba(0, 0, 0, 0.9);
   color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
@@ -730,11 +745,12 @@ footer .container-text-footer .text-copyright {
   .title-contact {
     font-size: 250%;
   }
-  .section-con {
-    margin: 8% 14%;
+  .container-con .section-con {
+    width: 55%;
+    margin: 8% 4%;
     padding-bottom: 6%;
   }
-  .section-con form .title-form {
+  .container-con .section-con form .title-form {
     font-size: 190%;
     margin-bottom: 8%;
   }
@@ -744,11 +760,12 @@ footer .container-text-footer .text-copyright {
     font-size: 220%;
     padding: 2% 0;
   }
-  .section-con {
-    margin: 6% 16% 4%;
+  .container-con .section-con {
+    width: 40%;
+    margin: 6% 4%;
     padding-bottom: 6%;
   }
-  .section-con form .title-form {
+  .container-con .section-con form .title-form {
     font-size: 180%;
     margin-bottom: 6%;
   }
@@ -759,15 +776,16 @@ footer .container-text-footer .text-copyright {
     padding: 1% 0;
     margin: 4% 7% 3% 7%;
   }
-  .section-con {
-    margin: 6% 20% 4%;
+  .container-con .section-con {
+    width: 40%;
+    margin: 6% 4%;
     padding-bottom: 5%;
   }
-  .section-con form .title-form {
+  .container-con .section-con form .title-form {
     font-size: 180%;
     margin-bottom: 6%;
   }
-  .section-con form .title-form .submit-button {
+  .container-con .section-con form .title-form .submit-button {
     font-size: 120%;
   }
 }

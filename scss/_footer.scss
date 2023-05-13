@@ -30,8 +30,18 @@ footer {
 
     .text-copyright {
       font-size: 90%;
-      color: map-get($color, shadow-secondary-8);
+      color: map-get($color, shadow-secondary-5);
       padding-top: 2%;
+
+      .luxury-programming {
+        color: map-get($color, shadow-secondary-6);
+        font-weight: 400;
+        @include transition-1(300ms);
+
+        &:hover {
+          color: map-get($color, secondary-color);
+        }
+      }
     }
   }
 }
