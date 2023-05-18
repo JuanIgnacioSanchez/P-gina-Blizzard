@@ -1,62 +1,60 @@
-.title-index {
+.info-section-index {
   background-color: map-get($color, primary-color);
-  text-align: center;
-  padding: 3% 0;
-  margin: 7%;
-  border: solid 1px map-get($color, shadow-secondary-3);
-  border-radius: 15px;
-  font-size: 210%;
-  color: map-get($color, secondary-color);
-  box-shadow: 0 0 10px map-get($color, shadow-secondary-3);
-  @include transition-1(400ms);
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 600;
-
-  &:hover {
-    box-shadow: 0 0 12px map-get($color, shadow-secondary-5);
-    transform: translateY(-5%);
-  }
 }
 
-.first-section-index {
-  margin: 4% 0;
-  padding: 10% 15%;
-  background-color: map-get($color, shadow-secondary-3);
-  box-shadow: 0 0 15px map-get($color, shadow-secondary-3);
-  color: map-get($color, secondary-color);
-  @include transition-1(300ms);
+.container-cuotas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5% 3%;
+  margin: 5% 0;
 
-  &:hover {
-    background-color: map-get($color, shadow-secondary-8);
-    box-shadow: 0 0 20px map-get($color, shadow-secondary-8);
-    color: map-get($color, primary-color);
-  }
-
-  .p-eslogan {
-    font-weight: 700;
-    font-size: 140%;
+  .cuotas-section {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin: 0;
-    @include transition-1(200ms);
+    padding: 4% 0;
+
+    .number-cuotas {
+      font-size: 350%;
+      color: map-get($color, shadow-secondary-8);
+      margin-bottom: 1%;
+      font-family: $font2;
+    }
+
+    .text1-cuotas {
+      font-size: 80%;
+      color: map-get($color, shadow-secondary-7);
+      margin: 0;
+      font-family: $font1;
+    }
+
+    .text2-cuotas {
+      font-size: 80%;
+      color: map-get($color, shadow-secondary-6);
+      margin: 0;
+      font-family: $font1;
+    }
   }
 }
 
-.fourth-section-index {
-  margin: 4% 0;
+.eslogan-section-index {
+  margin: 6% 0;
   padding: 10% 15%;
   background-color: map-get($color, shadow-secondary-3);
-  box-shadow: 0 0 15px map-get($color, shadow-secondary-3);
+  box-shadow: 0 0 10px map-get($color, shadow-secondary-3);
   color: map-get($color, secondary-color);
-  @include transition-1(300ms);
+  @include transition-1(250ms);
 
   &:hover {
     background-color: map-get($color, shadow-secondary-8);
-    box-shadow: 0 0 20px map-get($color, shadow-secondary-8);
+    box-shadow: 0 0 15px map-get($color, shadow-secondary-8);
     color: map-get($color, primary-color);
+    font-weight: 600;
   }
 
   .p-eslogan {
-    font-weight: 700;
+    font-family: $font1;
+    font-weight: 600;
     font-size: 140%;
     text-align: center;
     margin: 0;
@@ -64,8 +62,8 @@
   }
 }
 
-.fifth-section-index {
-  background-color: map-get($color, primary-color);
+.btn-whatsapp {
+  display: none;
 }
 
 /* Media Queries */
@@ -82,37 +80,6 @@
       font-size: 280%;
     }
   }
-
-  .first-section-index {
-    padding: 5% 15%;
-
-    &:hover {
-      transform: scale(105%);
-    }
-
-    .p-eslogan {
-      font-size: 200%;
-    }
-  }
-
-  .container-carousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10% 0;
-    box-shadow: 0 0 15px map-get($color, shadow-secondary-3);
-  }
-
-  .fourth-section-index {
-    padding: 5% 15%;
-
-    &:hover {
-      transform: scale(105%);
-    }
-
-    .p-eslogan {
-      font-size: 200%;
-    }
-  }
 }
 
 @media (min-width: 992px) {
@@ -121,58 +88,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .title-index {
-      width: 50%;
-      font-size: 200%;
-      padding: 2% 0;
-      margin: 6% 0;
-    }
   }
 
-  .first-section-index {
-    padding: 5% 10%;
-    font-size: 70%;
-    margin: 0;
-  }
-
-  .fourth-section-index {
-    padding: 5% 10%;
-    font-size: 70%;
-    margin: 10% 0 0 0;
-  }
-
-  .fifth-section-index {
+  .info-section-index {
     padding: 3% 20% 0;
+  }
+
+  .btn-whatsapp {
+    display: block;
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 30px;
+    right: 30px;
+    line-height: 55px;
+    @include transition-1(300ms);
+
+    img {
+      width: 100%;
+      filter: drop-shadow(0 0 5px #08b51a);
+    }
+
+    &:hover {
+      transform: translateY(-5%);
+      filter: drop-shadow(0 0 7px #08b51a);
+    }
   }
 }
 
 @media (min-width: 1400px) {
-  .container-title-index {
-    .title-index {
-      font-size: 220%;
-      padding: 1% 0;
-      margin: 4% 7% 6% 7%;
-    }
-  }
-
-  .first-section-index {
-    padding: 3%;
-    font-size: 70%;
-    margin: 0;
-  }
-
-  .container-carousel {
-    margin: 6% 10%;
-  }
-
-  .fourth-section-index {
-    padding: 3%;
-    font-size: 70%;
-    margin: 0;
-  }
-
-  .fifth-section-index {
+  .info-section-index {
     padding: 3% 30% 0;
+  }
+
+  .btn-whatsapp {
+    width: 60px;
+    height: 60px;
   }
 }

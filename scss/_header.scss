@@ -1,4 +1,5 @@
 header {
+  padding: 2% 0;
   position: sticky;
   top: 0;
   width: 100%;
@@ -64,12 +65,23 @@ header {
     }
 
     .navbar-brand {
-      width: 25%;
+      width: 35%;
       height: auto;
 
-      .logo-img {
-        width: 100%;
-        height: auto;
+      .title-index {
+        text-align: center;
+        padding: 4% 4% 4% 8%;
+        margin: 0;
+        font-size: 120%;
+        color: map-get($color, secondary-color);
+        @include transition-1(400ms);
+        font-family: $font3;
+        font-weight: 600;
+
+        &:hover {
+          box-shadow: 0 0 12px map-get($color, shadow-secondary-5);
+          transform: translateY(-5%);
+        }
       }
     }
   }
@@ -82,6 +94,11 @@ header {
     .navbar {
       .navbar-brand {
         width: 20%;
+
+        .title-index {
+          padding-left: 15%;
+          font-size: 200%;
+        }
       }
 
       .navbar-toggler {
@@ -113,6 +130,11 @@ header {
 
       .navbar-brand {
         width: 50%;
+
+        .title-index {
+          padding-left: 20%;
+          font-size: 180%;
+        }
       }
 
       .navbar-collapse {
@@ -121,7 +143,7 @@ header {
         justify-content: flex-end;
 
         .navbar-nav {
-          width: 70%;
+          width: 60%;
           display: flex;
           justify-content: space-around;
           font-size: 80%;
@@ -139,6 +161,10 @@ header {
 
       .navbar-brand {
         width: 50%;
+
+        .title-index {
+          font-size: 220%;
+        }
       }
 
       .navbar-collapse {
@@ -147,10 +173,10 @@ header {
         justify-content: flex-end;
 
         .navbar-nav {
-          width: 50%;
+          width: 60%;
           display: flex;
           justify-content: space-around;
-          font-size: 80%;
+          font-size: 100%;
         }
       }
     }
