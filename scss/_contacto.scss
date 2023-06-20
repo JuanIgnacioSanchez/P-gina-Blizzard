@@ -75,6 +75,10 @@
       }
     }
   }
+
+  .btn-whatsapp {
+    display: none;
+  }
 }
 
 /* Media Queries */
@@ -119,6 +123,27 @@
         }
       }
     }
+
+    .btn-whatsapp {
+      display: block;
+      position: fixed;
+      width: 55px;
+      height: 55px;
+      bottom: 30px;
+      right: 30px;
+      line-height: 55px;
+      @include transition-1(300ms);
+
+      img {
+        width: 100%;
+        filter: drop-shadow(0 0 5px #08b51a);
+      }
+
+      &:hover {
+        transform: translateY(-5%);
+        filter: drop-shadow(0 0 7px #08b51a);
+      }
+    }
   }
 }
 
@@ -132,7 +157,7 @@
   .container-con {
     .section-con {
       width: 40%;
-      margin: 6% 4%;
+      margin: 4%;
       padding-bottom: 5%;
 
       form {
@@ -145,6 +170,11 @@
           }
         }
       }
+    }
+
+    .btn-whatsapp {
+      width: 60px;
+      height: 60px;
     }
   }
 }

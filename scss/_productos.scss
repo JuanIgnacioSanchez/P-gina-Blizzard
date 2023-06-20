@@ -56,26 +56,33 @@
       padding: 4% 0;
     }
 
-    .input-product {
+    form {
       width: 45%;
-      border: 0;
-      border-radius: 15px;
-      background-color: map-get($color, primary-color);
-      color: map-get($color, secondary-color);
-      margin: 0 0 3% 0;
-      padding: 2%;
-      text-align: center;
-      transition: all 400ms ease;
+      .input-product {
+        width: 100%;
+        border: 0;
+        border-radius: 15px;
+        background-color: map-get($color, primary-color);
+        color: map-get($color, secondary-color);
+        margin: 0 0 3% 0;
+        padding: 2%;
+        text-align: center;
+        transition: all 400ms ease;
 
-      &:hover {
-        background-color: map-get($color, shadow-secondary-8);
-        color: map-get($color, primary-color);
-        font-weight: 600;
-        box-shadow: 0 0 15px map-get($color, shadow-secondary-3);
-        transform: scale(1.02);
+        &:hover {
+          background-color: map-get($color, shadow-secondary-8);
+          color: map-get($color, primary-color);
+          font-weight: 600;
+          box-shadow: 0 0 15px map-get($color, shadow-secondary-3);
+          transform: scale(1.02);
+        }
       }
     }
   }
+}
+
+.btn-whatsapp {
+  display: none;
 }
 
 /* Media Queries */
@@ -95,9 +102,11 @@
         font-size: 220%;
       }
 
-      .input-product {
-        font-size: 120%;
-        margin: 0;
+      form {
+        .input-product {
+          font-size: 120%;
+          margin: 0;
+        }
       }
     }
   }
@@ -122,10 +131,33 @@
         font-size: 140%;
       }
 
-      .input-product {
-        font-size: 80%;
-        margin: 0 0 4% 0;
+      form {
+        .input-product {
+          font-size: 80%;
+          margin: 0 0 4% 0;
+        }
       }
+    }
+  }
+
+  .btn-whatsapp {
+    display: block;
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 30px;
+    right: 30px;
+    line-height: 55px;
+    @include transition-1(300ms);
+
+    img {
+      width: 100%;
+      filter: drop-shadow(0 0 5px #08b51a);
+    }
+
+    &:hover {
+      transform: translateY(-5%);
+      filter: drop-shadow(0 0 7px #08b51a);
     }
   }
 }
@@ -150,10 +182,17 @@
         font-size: 150%;
       }
 
-      .input-product {
-        font-size: 90%;
-        margin: 0 0 4% 0;
+      form {
+        .input-product {
+          font-size: 90%;
+          margin: 0 0 4% 0;
+        }
       }
     }
+  }
+
+  .btn-whatsapp {
+    width: 60px;
+    height: 60px;
   }
 }

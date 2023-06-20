@@ -78,6 +78,10 @@
       border-top: 2px solid rgb(255 255 255 / 0%);
     }
   }
+
+  .btn-whatsapp {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -132,6 +136,27 @@
         margin: 6% 0;
         width: 70%;
         justify-self: center;
+      }
+    }
+
+    .btn-whatsapp {
+      display: block;
+      position: fixed;
+      width: 55px;
+      height: 55px;
+      bottom: 30px;
+      right: 30px;
+      line-height: 55px;
+      @include transition-1(300ms);
+
+      img {
+        width: 100%;
+        filter: drop-shadow(0 0 5px #08b51a);
+      }
+
+      &:hover {
+        transform: translateY(-5%);
+        filter: drop-shadow(0 0 7px #08b51a);
       }
     }
   }
@@ -195,6 +220,11 @@
       .bloque3 {
         grid-area: bloque3;
       }
+    }
+
+    .btn-whatsapp {
+      width: 60px;
+      height: 60px;
     }
   }
 }

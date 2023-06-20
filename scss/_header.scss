@@ -124,6 +124,7 @@ header {
 
 @media (min-width: 992px) {
   header {
+    padding: 1%;
     .navbar {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -155,6 +156,7 @@ header {
 
 @media (min-width: 1400px) {
   header {
+    padding: 0;
     .navbar {
       display: grid;
       grid-template-columns: auto 1fr;
